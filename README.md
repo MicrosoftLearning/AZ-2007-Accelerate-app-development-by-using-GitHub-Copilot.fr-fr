@@ -1,0 +1,1 @@
+# AZ-2007-Accelerate-app-development-by-using-GitHub-Copilot.fr-fr
