@@ -1,45 +1,45 @@
 ---
 demo:
-    title: 'Demo: Create unit tests for specific conditions by using GitHub Copilot'
-    module: 'Module 4: Develop unit tests using GitHub Copilot tools'
+  title: "Démonstration\_: Créer des tests unitaires pour des conditions spécifiques à l’aide de GitHub Copilot"
+  module: 'Module 4: Develop unit tests using GitHub Copilot tools'
 ---
 
-# Demo: Create unit tests for specific conditions by using GitHub Copilot
+# Démonstration : Créer des tests unitaires pour des conditions spécifiques à l’aide de GitHub Copilot
 
 ## Instructions
 
-The demo activities are designed for an environment that includes the following resources:
+Les activités de la version de démonstration sont conçues pour un environnement qui inclut les ressources suivantes :
 
 - Visual Studio Code.
-- The C# Dev Kit extension for Visual Studio Code.
-- The GitHub Copilot and GitHub Copilot Chat extensions for Visual Studio Code. A GitHub account with an active subscription for GitHub Copilot is required.
-- Sample code projects created using C#.
+- L’extension du kit de développement C# pour Visual Studio Code.
+- Les extensions GitHub Copilot et GitHub Copilot Chat pour Visual Studio Code. Il est nécessaire de disposer d’un compte GitHub avec un abonnement actif pour GitHub Copilot.
+- Des exemples de projets de code créés en C#.
 
-**NOTE**: We recommend that instructors consider using their own GitHub account and GitHub Copilot subscription for the demos. This will enable you to control and customize your dev environment. It will also make it easier to adjust the demos to fit the needs of your classrooms.
+**REMARQUE** : Nous recommandons aux instructeurs d’utiliser leur propre compte GitHub et leur abonnement GitHub Copilot pour les démonstrations. Ainsi vous pouvez contrôler et personnaliser votre environnement de développement. Cette démarche facilite également l’ajustement des démonstrations en fonction des besoins de vos salles de classe.
 
-**IMPORTANT**: If you choose to run the demos in the hosted lab environment rather than your instructor PC, you can unzip the sample apps in the hosted environment. You will need to configure the GitHub Copilot extensions in the hosted environment before you can run the demos. You may find that the hosted environment is slower than your local environment, so you may need to adjust the pace of the demos accordingly.
+**IMPORTANT** : Si vous choisissez d’exécuter les démonstrations dans l’environnement de laboratoire hébergé plutôt que sur votre ordinateur personnel instructeur, vous pouvez décompresser les exemples d’applications dans l’environnement hébergé. Vous devez configurer les extensions GitHub Copilot dans l’environnement hébergé avant de pouvoir exécuter les démonstrations. Vous pouvez constater que l’environnement hébergé est plus lent que votre environnement local. Vous devrez probablement ajuster l’allure des démonstrations en conséquence.
 
-### Introduce the demo
+### Présentez la version de démonstration
 
-The GitHub Copilot extensions can help you to create unit tests for specific conditions in your code. For example, you can use GitHub Copilot Chat to test the behavior of a method when it receives specific input.
+Les extensions GitHub Copilot peuvent vous aider à créer des tests unitaires pour des conditions spécifiques dans votre code. Par exemple, vous pouvez utiliser GitHub Copilot Chat pour tester le comportement d’une méthode lorsqu’elle reçoit une entrée spécifique.
 
-In this demonstration, you use the GitHub Copilot extensions to create unit tests for specific conditions.
+Dans cette version de démonstration, vous utilisez les extensions GitHub Copilot pour créer des tests unitaires pour des conditions spécifiques.
 
-### Create unit tests using GitHub Copilot
+### Créer des tests unitaires à l’aide de GitHub Copilot
 
-You can create unit tests using GitHub Copilot autocompletion suggestions. Using autocompletion suggestions can help you to quickly generate unit tests for your code.
+Vous pouvez créer des tests unitaires à l’aide de suggestions d’autocomplétion GitHub Copilot. L’utilisation des suggestions d’autocomplétion peut vous aider à générer rapidement des tests unitaires pour votre code.
 
-In this section of the demo, you use GitHub Copilot to create unit tests for the `IsPrime` method of the `PrimeService` class.
+Dans cette section de la version de démonstration, vous utilisez GitHub Copilot pour créer des tests unitaires pour la méthode `IsPrime` de la classe `PrimeService`.
 
-Use the following steps to complete this section of the demo:
+Utilisez les étapes suivantes pour terminer cette section de la version de démonstration :
 
-1. Open the **APL2007M4PrimeService-UnitTests** project folder in Visual Studio Code.
+1. Ouvrez le dossier de projet **APL2007M4PrimeService-UnitTests** dans Visual Studio Code.
 
-1. Open the PrimeServiceTests.cs file in the editor.
+1. Ouvrez le fichier PrimeServiceTests.cs dans l’éditeur.
 
-1. Delete all of the code inside the `PrimeServiceTests` class.
+1. Supprimez tout le code dans la classe `PrimeServiceTests`.
 
-    The contents of the PrimeServiceTests.cs file should resemble the following code snippet:
+    Le contenu du fichier PrimeServiceTests.cs doit ressembler à l’extrait de code suivant :
 
     ```csharp
 
@@ -50,17 +50,17 @@ Use the following steps to complete this section of the demo:
 
     ```
 
-1. Save the PrimeServiceTests.cs file, and then rebuild the solution.
+1. Enregistrez le fichier PrimeServiceTests.cs, puis régénérez la solution.
 
-1. To have GitHub Copilot generate an inline completion, create a blank line inside the `PrimeServiceTests` class.
+1. Pour que GitHub Copilot génère une saisie semi-automatique inlined, créez une ligne vide à l’intérieur de la classe `PrimeServiceTests`.
 
-    If you wait a second or two, GitHub Copilot suggests a completion for the `PrimeServiceTests` class.
+    Si vous attendez une seconde ou deux, GitHub Copilot vous suggère une saisie semi-automatique pour la classe `PrimeServiceTests`.
 
-1. Select **Accept**, and the take a minute to review the unit tests generated by GitHub Copilot.
+1. Sélectionnez **Accepter**, puis prenez un moment pour examiner les tests unitaires générés par GitHub Copilot.
 
-1. Take a minute to review the collection of unit tests that GitHub Copilot generated for the `IsPrime` method.
+1. Prenez une minute pour examiner la collection de tests unitaires générés par GitHub Copilot pour la méthode `IsPrime`.
 
-    The next section of the demo shows how to use GitHub Copilot Chat to ask GitHub Copilot to suggest additional edge cases that should be tested.
+    La section suivante de la version de démonstration montre comment utiliser GitHub Copilot Chat pour demander à GitHub Copilot de suggérer des cas d’arête supplémentaires qui doivent être testés.
 
     ```csharp
 
@@ -118,21 +118,21 @@ Use the following steps to complete this section of the demo:
 
     ```
 
-### Create unit tests for specific conditions using GitHub Copilot and GitHub Copilot Chat
+### Créer des tests unitaires pour des conditions spécifiques à l’aide de GitHub Copilot et de GitHub Copilot Chat
 
-1. Select the contents of the `PrimeServiceTests` class.
+1. Sélectionnez le contenu de la classe `PrimeServiceTests`.
 
-1. Open the Chat view.
+1. Ouvrez la vue Conversation.
 
-1. To add the PrimeService.cs file to the Chat view context, drag-and-drop the PrimeService.cs file from the Explorer view into the Chat view.
+1. Pour ajouter le fichier PrimeService.cs au contexte de la vue Conversation, faites glisser-déplacer le fichier PrimeService.cs de la vue Explorateur dans la vue Conversation.
 
-1. Enter the following prompt in the Chat view:
+1. Entrez le prompt suivant dans la vue Conversation :
 
     ```plaintext
     @workspace #selection are there any edge cases that should also be tested 
     ```
 
-1. Take a minute to review the suggestions provided by GitHub Copilot.
+1. Prenez un moment pour examiner les suggestions fournies par GitHub Copilot.
 
     ```plaintext
     Yes, there are a few edge cases that should also be tested:
@@ -203,30 +203,30 @@ Use the following steps to complete this section of the demo:
 
     ```
 
-1. Create a blank line after the last test method in the `PrimeServiceTests` class.
+1. Créez une ligne vide après la dernière méthode de test dans la classe `PrimeServiceTests`.
 
-1. In the Chat view, hover the mouse over the code snippet, and then select **Insert at Cursor**.
+1. Dans la vue Conversation, pointer avec la souris sur l’extrait de code, puis sélectionnez **Insérer au niveau du curseur**.
 
-1. Save the PrimeServiceTests.cs file, and then rebuild the solution.
+1. Enregistrez le fichier PrimeServiceTests.cs, puis régénérez la solution.
 
-1. Take a minute to review the collection of unit tests that GitHub Copilot generated for the `IsPrime` method.
+1. Prenez une minute pour examiner la collection de tests unitaires générés par GitHub Copilot pour la méthode `IsPrime`.
 
-    As always, it's important to review the work completed by GitHub Copilot to ensure that the tests are valid and that they cover the edge cases that you want to test. Once you're satisfied with the tests, you can run them to verify that they pass.
+    Comme toujours, il est important d’examiner le travail effectué par GitHub Copilot pour vous assurer que les tests sont valides et qu’ils couvrent les cas de périphérie que vous souhaitez tester. Une fois que vous êtes satisfait des tests, vous pouvez les exécuter pour vérifier leur réussite.
 
-1. Hover the mouse pointer over one of the green "test arrows".
+1. Placez le pointeur de la souris sur l’une des « flèches de test » vertes.
 
-    Notice the tooltip message telling you that you can either click to run the test, or right-click to see more options.
+    Notez que le message d’info-bulle vous indique que vous pouvez cliquer pour exécuter le test ou faites un clic droit pour afficher plus d’options.
 
-1. Right-click one of the green "test arrows".
+1. Faites un clic droit sur l’une des « flèches de test » vertes.
 
-1. Select **Reveal in Test Explorer**.
+1. Sélectionnez **Révéler dans l'Explorateur de tests**.
 
-    Notice that the Test Explorer view opens. The Test Explorer view can be used to run and debug tests, and to view the results of test runs. To open the Test Explorer view manually, select **Testing** from the Activity Bar on the left side of the Visual Studio Code window. The icon for the **Testing** view is the one that looks like a lab flask.
+    Notez que la vue Explorateur de tests s’ouvre. La vue Explorateur de tests peut être utilisée pour exécuter et déboguer des tests, ainsi que pour afficher les résultats des séries de tests. Pour ouvrir la vue Explorateur de tests manuellement, sélectionnez **Tester** à partir de la barre d’activité sur le côté gauche de la fenêtre Visual Studio Code. L’icône de la vue **Tester** est celle qui ressemble à un flacon de laboratoire.
 
-1. At the top of the Test Explorer view, select **Run Tests**.
+1. En haut de la vue Explorateur de tests, sélectionnez **Exécuter des tests**.
 
-    After a few seconds, the Test Explorer shows the results of the test run. You should see that all of the tests pass. Green checkmarks in the Test Explorer and to the left of the unit tests in the Editor indicate that the test passed.
+    Après quelques secondes, l’Explorateur de tests affiche les résultats de la série de tests. Vous constaterez la réussite de tous les tests. Des coches vertes dans l’Explorateur de tests et à gauche des tests unitaires dans l’Éditeur indiquent que le test a réussi.
 
-### Summary
+### Résumé
 
-In this demo, you used GitHub Copilot and GitHub Copilot Chat to create unit tests for specific conditions in the `PrimeService` class. You used code line completions to generate assertions to ensure that function input parameters are valid, and you used the Chat view to ask GitHub Copilot to suggest additional edge cases that should be tested. You reviewed the suggestions provided by GitHub Copilot and ran the tests to verify that they pass. You also learned how to use the Test Explorer in Visual Studio Code to run and view the results of test runs.
+Dans cette version de démonstration, vous avez utilisé GitHub Copilot et GitHub Copilot Chat pour créer des tests unitaires correspondant à des conditions spécifiques dans la classe `PrimeService`. Vous avez utilisé des saisies semi-automatiques de ligne de code pour générer des assertions afin de vous assurer que les paramètres d’entrée de fonction sont valides et vous avez utilisé la vue Conversation pour demander à GitHub Copilot de suggérer des cas de périphérie supplémentaires qui doivent être testés. Vous avez examiné les suggestions fournies par GitHub Copilot et exécuté les tests pour vérifier leur réussite. Vous avez également appris à utiliser l’Explorateur de tests dans Visual Studio Code pour exécuter et afficher les résultats des séries de tests.
