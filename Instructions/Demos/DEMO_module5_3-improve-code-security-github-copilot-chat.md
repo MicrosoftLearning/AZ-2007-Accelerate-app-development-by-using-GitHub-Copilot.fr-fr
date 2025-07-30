@@ -1,174 +1,174 @@
 ---
 demo:
-  title: "Démonstration\_: Améliorer la sécurité du code à l’aide de GitHub Copilot Chat"
-  module: 'Module 5: Implement code improvements using GitHub Copilot tools'
+    title: 'Demo: Improve code security by using GitHub Copilot Chat'
+    module: 'Module 5: Implement code improvements using GitHub Copilot tools'
 ---
 
-# Démonstration : Améliorer la sécurité du code à l’aide de GitHub Copilot Chat
+# Demo: Improve code security by using GitHub Copilot Chat
 
 ## Instructions
 
-Les activités de la version de démonstration sont conçues pour un environnement qui inclut les ressources suivantes :
+The demo activities are designed for an environment that includes the following resources:
 
 - Visual Studio Code.
-- L’extension du kit de développement C# pour Visual Studio Code.
-- Les extensions GitHub Copilot et GitHub Copilot Chat pour Visual Studio Code. Il est nécessaire de disposer d’un compte GitHub avec un abonnement actif pour GitHub Copilot.
-- Des exemples de projets de code créés en C#.
+- The C# Dev Kit extension for Visual Studio Code.
+- The GitHub Copilot and GitHub Copilot Chat extensions for Visual Studio Code. A GitHub account with an active subscription for GitHub Copilot is required.
+- Sample code projects created using C#.
 
-**REMARQUE** : Nous recommandons aux instructeurs d’utiliser leur propre compte GitHub et leur abonnement GitHub Copilot pour les démonstrations. Ainsi vous pouvez contrôler et personnaliser votre environnement de développement. Cette démarche facilite également l’ajustement des démonstrations en fonction des besoins de vos salles de classe.
+**NOTE**: We recommend that instructors consider using their own GitHub account and GitHub Copilot subscription for the demos. This will enable you to control and customize your dev environment. It will also make it easier to adjust the demos to fit the needs of your classrooms.
 
-**IMPORTANT** : Si vous choisissez d’exécuter les démonstrations dans l’environnement de laboratoire hébergé plutôt que sur votre ordinateur personnel instructeur, vous pouvez décompresser les exemples d’applications dans l’environnement hébergé. Vous devez configurer les extensions GitHub Copilot dans l’environnement hébergé avant de pouvoir exécuter les démonstrations. Vous pouvez constater que l’environnement hébergé est plus lent que votre environnement local. Vous devrez probablement ajuster l’allure des démonstrations en conséquence.
+**IMPORTANT**: If you choose to run the demos in the hosted lab environment rather than your instructor PC, you can unzip the sample apps in the hosted environment. You will need to configure the GitHub Copilot extensions in the hosted environment before you can run the demos. You may find that the hosted environment is slower than your local environment, so you may need to adjust the pace of the demos accordingly.
 
-### Présentez la version de démonstration
+### Introduce the demo
 
-La sécurité du code fait référence aux mesures prises pour protéger les logiciels contre les accès non autorisés, les violations de données et d’autres menaces de sécurité. La sécurité du code est un aspect essentiel du développement logiciel qui consiste à protéger les applications et les systèmes contre les menaces de sécurité. Améliorer la sécurité de votre code protège vos applications et systèmes contre les menaces de sécurité.
+Code security refers to the measures taken to protect software from unauthorized access, data breaches, and other security threats. Code security is an essential aspect of software development that involves protecting applications and systems from security threats. Improving your code security can help you to protect your applications and systems from security threats.
 
 > [!IMPORTANT]
-> Expliquez aux étudiants que cette version de démonstration ne concerne pas les meilleures pratiques de développement de code sécurisé. Il se concentre plutôt sur l’utilisation de GitHub Copilot Chat pour générer des suggestions visant à améliorer la sécurité du code dans un exemple d’application. Les suggestions ne représentent pas les meilleures pratiques ni des solutions complètes pour développer un code sécurisé. Les développeurs doivent faire appel à leur bon sens et à leur expertise pour évaluer et mettre en œuvre les suggestions fournies par GitHub Copilot Chat. L’adoption des recommandations de GitHub Copilot ne remplace en aucun cas les processus de révision et de tests de code approfondis.
+> Explain to the students that this demo isn't about best practices for developing secure code. Instead, it focuses on how to use GitHub Copilot Chat to generate suggestions for improving code security in a sample application. The suggestions do not represent best practices or comprehensive solutions for developing secure code. Developers should use their judgment and expertise to evaluate and implement the suggestions provided by GitHub Copilot Chat. Implementing suggestions proposed by GitHub Copilot does not replace the need for thorough code reviews and testing.
 
-#### Sécurité du code
+#### Code security
 
-Assurer la sécurité du code est la responsabilité de tous, pas seulement du développeur. Cependant, les développeurs jouent un rôle crucial en veillant à ce que le code qu’ils écrivent suit les pratiques de codage sécurisé. Les pratiques de codage sécurisé s’assurent que les vulnérabilités des logiciels ne soient pas exploitées par des attaquants. En suivant les pratiques de codage sécurisé, les développeurs protègent le logiciel contre les menaces de sécurité et s’assurent qu’il est sécurisé et fiable.
+Ensuring code security is everyone's responsibility, not just the developer. However, developers play a crucial role by ensuring that the code they write follows secure coding practices. Secure coding practices help to ensure that software vulnerabilities can't be exploited by attackers. By following secure coding practices, developers can help protect the software from security threats and ensure that it is secure and reliable.
 
-Les sections suivantes fournissent une vue d’ensemble des processus de sécurité du code que vos étudiants doivent connaître.
+The following sections provide an overview of code security processes that your students should be aware of.
 
-##### Évaluer la sécurité du code à l’aide d’une approche complète
+##### Evaluate code security using a comprehensive approach
 
-Lors de l’évaluation de la sécurité du code, il est important d’adopter une approche complète qui englobe divers aspects du cycle de vie du développement du logiciel. Voici quelques considérations clés à prendre en compte :
+When evaluating code security, it’s important to consider a comprehensive approach that encompasses various aspects of the software development lifecycle. Here are some key considerations:
 
-- Pratiques de codage sécurisé : le respect des normes et des directives de codage sécurisé pour prévenir les vulnérabilités.
-- Outils d’analyse du code : l’utilisation d’outils d’analyse du code statique et dynamique pour détecter les failles de sécurité.
-- Gestion des dépendances : la vérification que les bibliothèques et dépendances tierces sont à jour et exemptes de vulnérabilités connues.
-- Authentification et autorisation : l’implémentation de mécanismes d’authentification et d’autorisation robustes pour se protéger contre les accès non autorisés.
-- Protection des données : le chiffrement des données sensibles, à la fois au repos et en transit pour prévenir les violations de données.
-- Gestion des erreurs : le développement de procédures sécurisées de gestion des erreurs qui ne divulguent pas d’informations sensibles.
-- Tests de sécurité : l’exécution de tests de sécurité approfondis, notamment des tests d’intrusion et des évaluations de vulnérabilité.
-- Conformité : la vérification de la conformité du code aux normes et aux réglementations de sécurité pertinentes.
-- Apprentissage et formation : la mise à disposition aux développeurs d’un apprentissage et d’une formation continus en matière de sécurité pour les tenir informés des dernières menaces et des meilleures pratiques.
-- Réponse aux incidents : la préparation d’un plan de réponse aux incidents bien défini. En cas de violation de la sécurité, le plan de réponse aux incidents doit être accessible.
+- Secure coding practices: Adhering to secure coding standards and guidelines to prevent vulnerabilities.
+- Code analysis tools: Utilizing static and dynamic code analysis tools to detect security flaws.
+- Dependency management: Ensuring that third-party libraries and dependencies are up-to-date and free from known vulnerabilities.
+- Authentication and authorization: Implementing robust authentication and authorization mechanisms to protect against unauthorized access.
+- Data protection: Encrypting sensitive data both at rest and in transit to prevent data breaches.
+- Error handling: Developing secure error handling procedures that do not expose sensitive information.
+- Security testing: Conducting thorough security testing, including penetration testing and vulnerability assessments.
+- Compliance: Ensuring that the code complies with relevant security standards and regulations.
+- Education and training: Providing developers with ongoing security education and training to keep them informed about the latest threats and best practices.
+- Incident response: Having a well-defined incident response plan prepared. If a security breach occurs, the incident response plan must be accessible.
 
-L’examen de ces facteurs et l’intégration des meilleures pratiques de sécurité dans votre processus de développement contribuent à la création de contenus et d’applications sécurisés.
+Considering these factors and integrating security best practices into your development process contributes to the creation of secure content and applications.
 
-##### Effectuer des révisions de sécurité du code
+##### Conduct code security reviews
 
-Lorsque vous travaillez à garantir la sécurité du code, les développeurs doivent passer en revue les aspects suivants de leur code :
+When working to ensure that code is secure, developers should review the following aspects of their code:
 
-- Exactitude : la vérification que le code soit exempt d’erreurs logiques et de défauts susceptibles d’entraîner des vulnérabilités de sécurité.
-- Sécurité : l’évaluation du code pour garantir qu’il respecte les meilleures pratiques de sécurité et ne présente pas de vulnérabilités.
-- Diagnostics : l’inclusion de fonctionnalités appropriées de journalisation et de diagnostic pour détecter et répondre aux incidents de sécurité.
-- Erreurs de conception ou limitations : la révision de la conception du code pour vous assurer qu’il n’y a pas de défauts ou de limitations pouvant être exploités.
-- Scalabilité et performances : la considération du niveau de performance et de la scalabilité du code. Des niveaux de performance et une scalabilité médiocres peuvent affecter la sécurité dans des scénarios à charge élevée.
-- Localisation : la garantie que le code gère de manière sécurisée les différentes paramètres régionaux, ce qui peut affecter la mise en forme et la représentation des données.
-- Accessibilité (expérience utilisateur) : la vérification que les mesures de sécurité n’affectent pas négativement l’accessibilité et l’expérience utilisateur.
-- Test : la révision des stratégies de test et l’assurance que les tests de sécurité sont approfondis et couvrent tous les aspects du code.
-- Instrumentation : la mise en place du code doit être effectuée de manière à prendre en charge l’analyse de la sécurité et la détection des menaces.
-- Cohérence et conventions de style de code : le maintien d’un style de codage cohérent qui suit les directives et les normes de codage sécurisé.
+- Correctness: Verify that the code is free from logical errors and defects that could lead to security vulnerabilities.
+- Security: Ensure that code adheres to security best practices and doesn't contain vulnerabilities.
+- Diagnostics: Include proper logging and diagnostic capabilities to detect and respond to security incidents.
+- Design errors or limitations: Review the design of the code to ensure there are no flaws or limitations that could be exploited.
+- Scale and performance: Consider the performance and scalability of the code. Poor performance and scalability can impact security in high-load scenarios.
+- Localization: Ensure that the code securely handles different locales, which can affect data formatting and representation.
+- Accessibility (UX): Verify that security measures do not negatively impact the accessibility and user experience.
+- Testing: Review the testing strategies and ensure that security testing is thorough and covers all aspects of the code.
+- Instrumentation: Ensure that the code is instrumented in a way that supports security monitoring and threat detection.
+- Consistency and code style conventions: Maintain a consistent coding style that follows secure coding guidelines and standards.
 
-Lorsque les développeurs passent en revue ces aspects, ils peuvent améliorer considérablement la sécurité de leur code. Les révisions de code aident les développeurs à contribuer à l’état global de la sécurité des logiciels qu’ils développent.
+When developers review these aspects of their code, they can significantly enhance the security of their code. Code reviews help developers contribute to the overall security posture of the software they develop.
 
-##### Analyser les vulnérabilités du code
+##### Analyze code vulnerabilities
 
-Certaines parties d’une application sont plus vulnérables aux attaques de sécurité et il est essentiel de se concentrer sur la sécurisation de ces zones. Voici quelques-unes des zones les plus vulnérables :
+Certain portions of an application are more vulnerable to security attacks, and it’s crucial to focus on securing these areas. Here are some of the more vulnerable areas:
 
-- Points d’intégration : les révisions de la conception de sécurité doivent être effectuées pour les points d’intégration avec les équipes des produits dépendants. Les révisions sont essentielles pour les produits traitant des données à fort impact sur l’activité (HBI, High Business Impact) ou des applications et services d’entreprise.
-- Systèmes internes : les incidents internes constituent une cause courante de violations de la sécurité, en particulier dans les petites entreprises.
-- Systèmes de messagerie : les serveurs de messagerie, en particulier ceux qui ne sont pas pris en charge ou non corrigés, sont toujours vulnérables.
-- Bases de données et stockage : le pré-chiffrage des données sensibles attendu par les bases de données avant le stockage peut les rendre vulnérables si les données ne sont pas chiffrées comme prévu.
-- L’environnement d’exécution : la détection des attaques sur une application en temps réel, rendue possible par des technologies telles que la Protection automatique des applications en exécution (RASP, Runtime Application Self-Protection), fait de l’environnement d’exécution une zone critique à sécuriser.
-- Applications web : les applications web sont souvent la cible d’attaquants utilisant des méthodes telles que l’injection de code SQL, le scripting inter-site (XSS, Cross site scripting) et les dépassements de mémoire tampon.
-- Points de terminaison : les appareils et les applications sont exposés à des cyber-attaques. Il est essentiel de réduire la surface d’attaque en utilisant des fonctionnalités telles que l’atténuation des ransomware, le contrôle des applications, la protection web et le pare-feu réseau.
+- Integration points: Security design reviews must be conducted for integration points with dependent product teams. Reviews are essential for products handling high business impact (HBI) data or enterprise applications and services.
+- Internal systems: Internal incidents are a common cause of security breaches, especially in small businesses.
+- Email systems: Email servers, particularly those that are unsupported or unpatched, are persistently vulnerable.
+- Databases and storage: Databases that expect sensitive data to be pre-encrypted before storage can be vulnerable if the data is not encrypted as expected.
+- Runtime environment: Technologies like Runtime Application Self-Protection (RASP) can detect attacks on an application in real-time, making the runtime environment a critical area to secure.
+- Web applications: Web applications are often targeted by attackers using methods like SQL injection, cross-site scripting (XSS), and buffer overflows.
+- Endpoints: Devices and applications are at risk of cyber attacks. It’s essential to reduce the attack surface using capabilities like ransomware mitigation, application control, web protection, and network firewall.
 
-Les développeurs et les équipes de sécurité doivent hiérarchiser ces domaines et implémenter des mesures de sécurité fortes pour se protéger contre les attaques potentielles. Les révisions de sécurité, les mises à jour et l’adhésion aux meilleures pratiques, toutes effectuées régulièrement, atténuent ces vulnérabilités.
+Developers and security teams should prioritize these areas and implement strong security measures to protect against potential attacks. Regular security reviews, updates, and adherence to best practices can help mitigate these vulnerabilities.
 
-##### Rechercher des failles de sécurité courantes
+##### Search for common security flaws
 
-Les développeurs peuvent rencontrer diverses failles de sécurité dans leur code, ce qui peut entraîner des vulnérabilités si elles ne sont pas correctement traitées. Voici quelques failles de sécurité typiques :
+Developers can encounter various security flaws in their code, which can lead to vulnerabilities if not properly addressed. Some typical security flaws include:
 
-- Failles d’injection : telles que les injections SQL, NoSQL, OS et LDAP, où des données non approuvées sont envoyées à un interpréteur dans le cadre d’une commande ou d’une requête.
-- Authentification compromise : lorsque l’authentification et la gestion des sessions sont implémentées de manière incorrecte, l’authentification peut être compromise. De bonnes implémentations garantissent que les mots de passe, les clés et les jetons de session ne sont pas compromis par des attaquants.
-- Exposition de données sensibles : une protection inadéquate des données sensibles peut entraîner une exposition lors du transfert sur le réseau ou au repos.
-- Contrôle d’accès défaillant : les restrictions qui contrôlent l’accès accordé aux utilisateurs authentifiés ne sont pas correctement appliquées.
-- Scripting inter-site (XSS) : les failles XSS se produisent chaque fois qu’une application inclut des données non approuvées dans une page web sans validation ou échappement appropriés.
-- Désérialisation non sécurisée : cela peut entraîner une exécution de code à distance, des attaques par rejeu, des attaques par injection et des attaques par élévation des privilèges.
-- Journalisation et analyse insuffisantes : la journalisation et l’analyse insuffisantes, associées à une intégration manquante ou inefficace à la réponse aux incidents, permettent la poursuite des attaques.
-- Références directes non sécurisées à des objets (IDOR, Insecure Direct Object References) : un type de problème de contrôle d’accès qui survient lorsqu’une application fournit un accès direct à des objets en fonction de l’entrée fournie par l’utilisateur.
-- Contrôle d’accès manquant au niveau de la fonction : parfois, une application ne protège pas correctement les contrôles d’accès au niveau de la fonction, permettant ainsi aux attaquants de falsifier des requêtes d’accès aux fonctionnalités sans autorisation appropriée.
+- Injection Flaws: Such as SQL, NoSQL, OS, and LDAP injection, where untrusted data is sent to an interpreter as part of a command or query.
+- Broken Authentication: When authentication and session management are implemented incorrectly, authentication can be broken. Good implementations ensure that passwords, keys, and session tokens aren't compromised by attackers.
+- Sensitive Data Exposure: Inadequate protection of sensitive data can lead to exposure during transfer over the network or at rest.
+- Broken Access Control: Restrictions that control the access granted to authenticated users are not being properly enforced.
+- Cross-Site Scripting (XSS): XSS flaws occur whenever an application includes untrusted data in a web page without proper validation or escaping.
+- Insecure Deserialization: This can lead to remote code execution, replay attacks, injection attacks, and privilege escalation attacks.
+- Insufficient Logging & Monitoring: Insufficient logging and monitoring, coupled with missing or ineffective integration with incident response, allows for continued attacks.
+- Insecure Direct Object References (IDOR): A type of access control issue that arises when an application provides direct access to objects based on user-supplied input.
+- Missing Function Level Access Control: Sometimes an application does not properly protect function level access controls, allowing attackers to forge requests to access functionality without proper authorization.
 
-De nombreuses autres failles de sécurité peuvent être trouvées dans le code. Il est important que les développeurs utilisent des outils et les meilleures pratiques pour identifier et résoudre ces problèmes de manière proactive.
+Many other security flaws can be found in code. It’s important for developers to use tools and best practices to identify and fix these issues proactively.
 
-### Développer des prompts pour GitHub Copilot Chat
+### Develop prompts for GitHub Copilot Chat
 
-Les prompts que vous écrivez pour GitHub Copilot Chat doivent fournir un contexte et une intention clairement définis. Tenez compte des suggestions suivantes lors du développement de vos prompts :
+The prompts you write for GitHub Copilot Chat should provide a clearly defined context and intent. Consider the following suggestions when developing your prompts:
 
-- Définissez un contexte externe délimité à un niveau supérieur au code que vous souhaitez mettre à jour. Par exemple, si vous souhaitez améliorer une méthode, spécifiez la classe ou le fichier qui inclut la méthode comme contexte externe. Repérez la méthode comme contexte interne.
-- Utilisez les participants de conversation et les variables de conversation pour vous aider à spécifier le contexte. Vous pouvez utiliser les variables de conversation `#file:` et `#selection` pour identifier le code spécifique sur lequel vous vous concentrez. Vous pouvez également inclure l’espace de travail complet (`@workspace`) le cas échéant. Reportez-vous à la sélection du fichier ou du code dans la partie en langage naturel de votre prompt.
-- L’intention doit être claire, concise et spécifique. Votre prompt doit spécifier le type d’amélioration que vous souhaitez atteindre.
+- Define an outer context that's scoped at a higher level than the code you want to update. For example, if you want to improve a method, specify the class or file that includes the method as the outer context. Identify the method as an inner context.
+- Use chat participants and chat variables to help specify context. You can use the `#file:` and `#selection` chat variables to identify the specific code you are focused on. You can also include the full workspace (`@workspace`) when appropriate. Refer to the file or code selection in the natural language portion of your prompt.
+- The intent should be clear, concise, and specific. Your prompt should specify the type of improvement you want to achieve.
 
-Pendant cette phase, vous passez en revue le projet **APL2007M5BankAccount-Security**, puis vous créez trois requêtes pour GitHub Copilot Chat. Les prompts se concentrent sur l’amélioration de la sécurité du code.
+During this portion of the demo, you review the **APL2007M5BankAccount-Security** project and create three prompts for GitHub Copilot Chat. The prompts focus on improving code security.
 
-Suivez les étapes ci-dessous pour effectuer cette phase de la version de démonstration :
+Use the following steps to complete this portion of the demo:
 
-1. Ouvrez le projet **APL2007M5BankAccount-Security**, puis passez en revue les fichiers de code **Program.cs** et **BankAccount.cs**.
+1. Open the **APL2007M5BankAccount-Security** project, and then review the **Program.cs** and **BankAccount.cs** code files.
 
-    Le fichier **Program.cs** contient le code d’une application bancaire simple qui simule la création de comptes bancaires, de transactions et de transferts.
+    The **Program.cs** file contains the code for a simple banking application that simulates the creation of bank accounts, transactions, and transfers.
 
-    Le fichier **BankAccount.cs** contient le code de la classe `BankAccount`, qui représente un compte bancaire avec des fonctionnalités de base, telles que le dépôt, le retrait et la consultation du solde.
+    The **BankAccount.cs** file contains the code for the `BankAccount` class, which represents a bank account with basic functionalities such as deposit, withdrawal, and balance inquiry.
 
-1. Prenez une minute pour décrire certaines requêtes qui pourraient être utilisées pour améliorer la sécurité du code.
+1. Take a minute to describe some prompts that could be used to improve code security.
 
-    Pour ce projet, vous pouvez utiliser les prompts suivants pour générer des suggestions visant à améliorer la sécurité de votre code :
+    For this project, you can use the following prompts to generate suggestions for improving your code security:
 
-    Requête : `@workspace /explain How can I implement authentication in the [selected code]?` (attacher BankAccount.cs au contexte Conversation)
+    Prompt: `@workspace /explain How can I implement authentication in the [selected code]?` (attach BankAccount.cs to the Chat context)
 
-    Requête : `@workspace /explain How can I protect sensitive data in the [selected code]?` (attacher BankAccount.cs au contexte Conversation)
+    Prompt: `@workspace /explain How can I protect sensitive data in the [selected code]?` (attach BankAccount.cs to the Chat context)
 
-    Requête : `@workspace /explain How can I implement logging of suspicious account activities of the [selected code]?` (attacher BankAccount.cs au contexte Conversation)
+    Prompt: `@workspace /explain How can I implement logging of suspicious account activities of the [selected code]?` (attach BankAccount.cs to the Chat context)
 
-    Requête : `@workspace /explain How can I improve the security of exception handling in the [selected code]?` (attacher BankAccount.cs au contexte Conversation)
+    Prompt: `@workspace /explain How can I improve the security of exception handling in the [selected code]?` (attach BankAccount.cs to the Chat context)
 
-    Requête : `@workspace /explain How can I improve the security of the [selected code]?` (attacher BankAccount.cs au contexte Conversation)
+    Prompt: `@workspace /explain How can I improve the security of the [selected code]?` (attach BankAccount.cs to the Chat context)
 
-    Requête : `@workspace /explain How can I improve the security of the [selected code]?` (attacher Program.cs au contexte Conversation)
+    Prompt: `@workspace /explain How can I improve the security of the [selected code]?` (attach Program.cs to the Chat context)
 
-1. Sélectionnez trois requêtes à utiliser pendant le reste de la version de démonstration.
+1. Select three prompts to use during the remainder of the demo.
 
-    Essayez de sélectionner deux prompts qui traitent des problèmes de sécurité dans le fichier BankAccount.cs et un dans le fichier Program.cs. Dans cette version de démonstration, la classe BankAccount représente votre « produit ». Le fichier Program.cs utilise la classe BankAccount pour simuler des activités et des transactions de compte.
+    Try to select two prompts that address security issues in the BankAccount.cs file and one for the Program.cs file. In this demo, the BankAccount class represents your "product". The Program.cs file uses the BankAccount class to simulate account activities and transactions.
 
-### Améliorer la sécurité du code de la classe BankAccount à l’aide de GitHub Copilot Chat
+### Improve code security of the BankAccount class using GitHub Copilot Chat
 
-Développer un code sécurisé est essentiel pour tout projet de logiciel. Le niveau de sécurité requis dépend de la nature de l’application et des données qu’elle traite.
+Developing secure code is essential for any software project. The level of security required depends on the nature of the application and the data it processes.
 
-Dans cette version de démonstration, vous utilisez GitHub Copilot Chat pour générer des suggestions pour améliorer la sécurité de la classe BankAccount dans le projet **APL2007M5BankAccount-Security**.
+In this demonstration, you use GitHub Copilot Chat to generate suggestions for improving the security of the BankAccount class in the **APL2007M5BankAccount-Security** project.
 
-GitHub Copilot Chat peut être utilisé pour améliorer la sécurité du code. Vos prompts peuvent diriger GitHub Copilot à générer des suggestions pour améliorer l’authentification, la protection des données, la journalisation et des dizaines d’autres sujets. Vous pouvez également créer des prompts de grande ampleur qui sollicitent des suggestions globales pour améliorer la sécurité du code. L’utilisation d’une combinaison de prompts spécifiques et généraux peut vous aider à cibler les domaines nécessitant des améliorations et à mettre en œuvre les modifications nécessaires.
+GitHub Copilot Chat can be used to help improve code security. Your prompts can direct GitHub Copilot to generate suggestions for improving authentication, data protection, logging, and dozens of other topics. You can also create broadly scoped prompts that ask for general suggestions to improve code security. A combination of specific and general prompts can help you to identify areas that need improvement and implement the necessary changes.
 
 > [!TIP]
-> L’implémentation et le test des mises à jour suggérées prennent un certain temps. Ce facteur doit être pris en compte dans le cadre de cette version de démonstration. La sélection de prompts axés sur des domaines spécifiques d’amélioration peut vous aider à gérer votre temps. Les prompts dont l’ampleur est trop grande peuvent engendrer de nombreuses suggestions, voire des propositions complexes, rendant leur évaluation et leur mise en œuvre ardues dans des délais restreints. Une fois créés, vos prompts peuvent être mis à jour avec des détails plus spécifiques si vous remarquez que les mises à jour suggérées sont trop vastes ou trop complexes.
+> Implementing and testing suggested updates takes time, and time may be a factor during this demo. Selecting prompts that focus on specific areas of improvement can help you to manage your time. Prompts that are too broad may generate a large number of suggestions or complex suggestions that are difficult to evaluate and implement in a short amount of time. Once you begin, you can update your prompts with more specific details if you find that the suggested updates are too broadly scoped or too complex.
 
-1. Vérifiez que le projet génère et s’exécute sans erreur.
+1. Ensure that the project builds and runs without errors.
 
-    Les avertissements sont tolérables tant que l’application s’exécute, mais les erreurs doivent être résolues avant de commencer à utiliser GitHub Copilot Chat.
+    Warnings are acceptable as long as the application runs, but errors must be resolved before you start working with GitHub Copilot Chat.
 
-1. Ouvrez le fichier BankAccount.cs dans Visual Studio Code, puis sélectionnez tout le code dans le fichier.
+1. Open the BankAccount.cs file in Visual Studio Code, and then select all of the code in the file.
 
-1. Ouvrez la vue Conversation.
+1. Open the Chat view.
 
-1. Dans la vue Conversation, utilisez le bouton **Attacher le contexte** pour ajouter des fichiers pertinents au contexte Conversation, puis entrez votre requête.
+1. In the Chat view, use the **Attach Context** button to add relevant files to the Chat context, and then enter your prompt.
 
-1. Examinez les suggestions fournies par GitHub Copilot Chat.
+1. Review the suggestions provided by GitHub Copilot Chat.
 
-    Par exemple, supposons que vous effectuiez les actions suivantes :
+    For example, suppose you complete the following actions:
 
-    - Vous ouvrez le fichier BankAccount.cs et vous sélectionnez tout le code.
-    - Vous choisissez l’invite suivante : `@workspace /explain How can I implement authentication in the BankAccount.cs file?`
-    - Vous ouvrez la vue Conversation et vous attachez les fichiers BankAccount.cs et Program.cs au contexte Conversation.
-    - Vous entrez l’invite dans la vue Conversation.
+    - You open the BankAccount.cs file and select all of the code.
+    - You choose the following prompt: `@workspace /explain How can I implement authentication in the BankAccount.cs file?`
+    - You open the Chat view and attach the BankAccount.cs and Program.cs files to the Chat context.
+    - You enter the prompt in the Chat view.
 
-    GitHub Copilot Chat suggère des mises à jour qui sont similaires à la réponse suivante :
+    GitHub Copilot Chat suggests updates that are similar to the following response:
 
-    *L’implémentation de l’authentification dans ce contexte impliquerait généralement l’ajout d’une méthode à la classe BankAccount qui vérifie l’identité du titulaire du compte avant d’autoriser certaines opérations. Cette opération peut être effectuée à l’aide d’un mot de passe, d’un code PIN ou d’une autre forme d’authentification.*
+    *Implementing authentication in this context would typically involve adding a method to the BankAccount class that verifies the account holder's identity before allowing certain operations. This could be done using a password, a PIN, or some other form of authentication.*
 
-    *Voici un exemple simple de la façon dont vous pouvez ajouter l’authentification par mot de passe à la classe BankAccount :*
+    *Here's a simple example of how you might add password-based authentication to the BankAccount class:*
 
     ```csharp
 
@@ -199,61 +199,61 @@ GitHub Copilot Chat peut être utilisé pour améliorer la sécurité du code. V
 
     ```
 
-    *Dans cet exemple, un mot de passe est ajouté en tant que paramètre au constructeur de BankAccount et stocké dans un champ privé. Une méthode d’authentification est ajoutée pour vérifier si le mot de passe fourni correspond au mot de passe stocké. La méthode Credit (et d’autres méthodes qui devraient exiger l’authentification) est modifiée pour prendre un mot de passe en tant qu’argument et appeler Authenticate avant d’effectuer l’opération.*
+    *In this example, a password is added as a parameter to the BankAccount constructor and stored in a private field. An Authenticate method is added that checks if the provided password matches the stored password. The Credit method (and other methods that should require authentication) is modified to take a password as an argument and call Authenticate before performing the operation.*
 
-    *Il s’agit d’une forme d’authentification très simple qui n’est pas suffisamment sécurisée pour des applications réelles. Dans une application réelle, vous voudriez hacher et saler le mot de passe avant de le stocker, et vous auriez besoin d’utiliser des méthodes sécurisées pour transmettre le mot de passe de l’utilisateur à l’application. Vous pourriez également envisager d’utiliser l’authentification à 2 facteurs ou d’autres méthodes plus sécurisées.*
+    *This is a very basic form of authentication and is not secure enough for real applications. In a real application, you would want to hash and salt the password before storing it, and you would need to use secure methods to transmit the password from the user to the application. You might also want to consider using two-factor authentication or other more secure methods.*
 
-1. Implémentez les mises à jour suggérées qui aident à améliorer la sécurité du code pour votre classe `BankAccount`.
+1. Implement the suggested updates that help to improve code security for your `BankAccount` class.
 
-    Le fichier Program.cs doit être mis à jour pour utiliser le mot de passe et l’authentification ajoutés à la classe BankAccount. Vous pouvez utiliser GitHub Copilot Chat pour générer des suggestions de mise à jour du fichier Program.cs.
+    The Program.cs file must be updated to use the password and authentication added to the BankAccount class. You can use GitHub Copilot Chat to generate suggestions for updating the Program.cs file.
 
-    1. Sélectionnez le contenu du fichier Program.cs, attachez les fichiers Program.cs et BankAccount.cs au contexte Conversation, puis entrez la requête suivante dans la vue Conversation :
+    1. Select the contents of the Program.cs file, attach the Program.cs and BankAccount.cs files to the Chat context, and then enter the following prompt in the Chat view:
 
         ```plaintext
         @workspace /Explain How can I update the Program.cs file to use the password and authentication added to BankAccount.cs?
         ```
 
-    1. Passez en revue les suggestions fournies par GitHub Copilot Chat, puis implémentez les mises à jour suggérées.
+    1. Review the suggestions provided by GitHub Copilot Chat, and then implement the suggested updates.
 
-    1. Pour vous assurer qu’aucune erreur n’a été introduite par les modifications, compilez et exécutez votre solution avant de continuer.
+    1. To ensure that no errors were introduced by the changes, build and run your solution before continuing.
 
-        Utilisez GitHub Copilot pour résoudre les problèmes identifiés lors du processus de build.
+        Use GitHub Copilot to help resolve any issues identified during the build process.
 
     > [!IMPORTANT]
-    > Assurez-vous que vos étudiants comprennent que cette forme d’authentification très simple n’est pas suffisamment sécurisée pour des applications réelles. Dans une application réelle, vous voudriez hacher et saler le mot de passe avant de le stocker, et vous auriez besoin d’utiliser des méthodes sécurisées pour transmettre le mot de passe de l’utilisateur à l’application. Vous pourriez également envisager d’utiliser l’authentification à deux facteurs ou d’autres méthodes plus sécurisées.
+    > Ensure that your students understand this very basic form of authentication is not secure enough for real applications. In a real application, you would want to hash and salt the password before storing it, and you would need to use secure methods to transmit the password from the user to the application. You might also want to consider using two-factor authentication or other more secure methods.
 
-1. Vérifiez que votre application est générée et qu’elle s’exécute avant de continuer.
+1. Ensure that your application builds and runs before continuing.
 
-1. Sélectionnez tout le code dans le fichier BankAccount.cs, puis entrez votre deuxième prompt dans la vue Conversation.
+1. Select all of the code in the BankAccount.cs file, and then enter your second prompt in the Chat view.
 
-1. Vérifiez les suggestions fournies par GitHub Copilot Chat.
+1. Review the suggestions provided by GitHub Copilot Chat.
 
-    Par exemple, supposons que vous effectuiez les actions suivantes :
+    For example, suppose you complete the following actions:
 
-    - Vous ouvrez le fichier BankAccount.cs et vous sélectionnez tout le code.
-    - Vous choisissez l’invite suivante : `@workspace /explain How can I protect account numbers and account holder names in the selected code?`
-    - Vous ouvrez la vue Conversation et vous attachez les fichiers BankAccount.cs et Program.cs au contexte Conversation.
-    - Vous entrez l’invite dans la vue Conversation.
+    - You open the BankAccount.cs file and select all of the code.
+    - You choose the following prompt: `@workspace /explain How can I protect account numbers and account holder names in the selected code?`
+    - You open the Chat view and attach the BankAccount.cs and Program.cs files to the Chat context.
+    - You enter the prompt in the Chat view.
 
-    GitHub Copilot Chat suggère des mises à jour qui sont similaires à la réponse suivante :
+    GitHub Copilot Chat suggests updates that are similar to the following response:
 
-    *Pour protéger les données sensibles telles que les numéros de compte et les noms des titulaires de compte dans votre classe BankAccount, vous pouvez effectuer les étapes suivantes :*
+    *To protect sensitive data such as account numbers and account holder names in your BankAccount class, you can take the following steps:*
 
-    *1. Utilisez l’encapsulation :*
+    *1. Use Encapsulation:*
 
-    *- Rendez privées les propriétés sensibles et fournissez un accès contrôlé via des méthodes.*
+    *- Make the sensitive properties private and provide controlled access through methods.*
 
-    *2. Chiffrez les données sensibles :*
+    *2. Encrypt Sensitive Data:*
 
-    *- Utilisez le chiffrement pour stocker les données sensibles de façon sécurisée.*
+    *-Use encryption to store sensitive data securely.*
 
-    *3. Évitez le stockage en texte clair :*
+    *3. Avoid Plaintext Storage:*
 
-    * : Vérifiez que les données sensibles ne sont pas stockées ou transmises en texte clair.*
+    *- Ensure that sensitive data is not stored or transmitted in plaintext.*
 
-    *Implémentation mise à jour*
+    *Updated Implementation*
 
-    *Voici une version de BankAccount.cs mise à jour qui utilise le chiffrement pour les numéros de compte et les noms des titulaires de compte :*
+    *Here is an updated version of BankAccount.cs that uses encryption for account numbers and account holder names:*
 
     ```csharp
 
@@ -521,56 +521,56 @@ GitHub Copilot Chat peut être utilisé pour améliorer la sécurité du code. V
 
     ```
 
-    *Utilisation :*
+    *Usage:*
 
-    *– Vérifiez que vous disposez des bibliothèques de chiffrement nécessaires. L’exemple ci-dessus utilise le chiffrement AES avec une clé et un vecteur d’initialisation codés en dur, à des fins de simplicité. Dans une application réelle, vous devez gérer les clés et les vecteurs d’initialisation de façon sécurisée, en utilisant éventuellement un service de gestion de clés.*
+    *- Ensure you have the necessary cryptographic libraries available. The above example uses AES encryption with a hardcoded key and IV for simplicity. In a real-world application, you should securely manage keys and IVs, possibly using a key management service.*
 
     > [!IMPORTANT]
-    > Dans une application réelle, vous devez gérer les clés et les vecteurs d’initialisation de façon sécurisée, en utilisant éventuellement un service de gestion des clés. Les exemples fournis dans cette formation identifient des aspects à améliorer, mais ne représentent pas les meilleures pratiques pour le chiffrement sécurisé. Vous pouvez utiliser GitHub Copilot Chat pour rechercher des suggestions supplémentaires afin d’améliorer le chiffrement et la protection des données dans votre application.
+    > In a real-world application, you should securely manage keys and IVs, possibly using a key management service. The examples provided in this training identify areas for improvement but do not represent best practices for secure encryption. You can use GitHub Copilot Chat to pursue additional suggestions for improving encryption and data protection in your application.
 
-1. Pas besoin d’implémenter les mises à jour suggérées pour la deuxième requête.
+1. Do not need to implement the suggested updates for the second prompt.
 
-    Dans cet exemple, les mises à jour suggérées permettraient d’améliorer la sécurité de l’application, mais nécessitent une configuration approfondie ainsi que des mises à jour importantes du fichier Program.cs, ce qui dépasse la portée de cette version de démonstration.
+    In the example, the suggested updates would help to improve the security of the application, but they require significant configuration and updates to the Program.cs code that is beyond the scope of this demo.
 
-### Améliorer la sécurité du code de la classe Program à l’aide de GitHub Copilot Chat
+### Improve code security of the Program class using GitHub Copilot Chat
 
-1. Ouvrez le fichier Program.cs dans Visual Studio Code, puis sélectionnez tout le code dans le fichier.
+1. Open the Program.cs file in Visual Studio Code, and then select all of the code in the file.
 
-1. Ouvrez la vue Conversation, puis entrez le premier prompt que vous avez préparé pour la classe Program.
+1. Open the Chat view, and then enter the first prompt that you prepared for the Program class.
 
-1. Vérifiez les suggestions fournies par GitHub Copilot Chat.
+1. Review the suggestions provided by GitHub Copilot Chat.
 
-    Par exemple, supposons que vous effectuiez les actions suivantes :
+    For example, suppose you complete the following actions:
 
-    - Vous ouvrez le fichier Program.cs et vous sélectionnez tout le code.
-    - Vous choisissez l’invite suivante : `@workspace /explain How can I improve the security of the Program.cs file?`
-    - Vous ouvrez la vue Conversation et vous attachez les fichiers BankAccount.cs et Program.cs au contexte Conversation.
-    - Vous entrez l’invite dans la vue Conversation.
+    - You open the Program.cs file and select all of the code.
+    - You choose the following prompt: `@workspace /explain How can I improve the security of the Program.cs file?`
+    - You open the Chat view and attach the BankAccount.cs and Program.cs files to the Chat context.
+    - You enter the prompt in the Chat view.
 
-    GitHub Copilot Chat suggère des mises à jour qui sont similaires à la réponse suivante :
+    GitHub Copilot Chat suggests updates that are similar to the following response:
 
-    *Pour améliorer la sécurité du fichier Program.cs, vous devez vous concentrer sur les aspects suivants :*
+    *To improve the security of the Program.cs file, you should focus on the following areas:*
 
-    *1. Sécurisez la gestion des mots de passe :*
+    *1. Secure Password Handling:*
 
-    *– Utilisez le hachage de mot de passe sécurisé et évitez de stocker les mots de passe dans un texte en clair.*
-    *– Utilisez une bibliothèque telle que BCrypt.Net pour le hachage des mots de passe.*
+    *- Use secure password hashing and avoid storing passwords in plaintext.*
+    *- Use a library like BCrypt.Net for hashing passwords.*
 
-    *2. Chiffrez les données sensibles :*
+    *2. Encrypt Sensitive Data:*
 
-    *- Chiffrez les données sensibles telles que les numéros de compte et les noms des titulaires de compte.*
+    *- Encrypt sensitive data such as account numbers and account holder names.*
 
-    *3. Évitez les mots de passe codés en dur :*
+    *3. Avoid Hardcoded Passwords:*
 
-    *– Évitez d’utiliser des mots de passe codés en dur. Privilégiez la génération de mots de passe aléatoires robustes ou invitez les utilisateurs à créer les leurs.*
+    *- Avoid using hardcoded passwords. Instead, generate strong random passwords or prompt users to create their own.*
 
-    *4. Utilisez la génération de nombres aléatoires sécurisés :*
+    *4. Use Secure Random Number Generation:*
 
-    *- Utilisez un générateur de nombres aléatoires sécurisés par chiffrement pour générer des données sensibles.*
+    *- Use a cryptographically secure random number generator for generating sensitive data.*
 
-    *Implémentation mise à jour*
+    *Updated Implementation*
 
-    *Voici une version mise à jour de Program.cs qui intègre ces améliorations :*
+    *Here is an updated version of Program.cs that incorporates these improvements:*
 
     ```csharp
 
@@ -745,39 +745,39 @@ GitHub Copilot Chat peut être utilisé pour améliorer la sécurité du code. V
 
     ```
 
-1. Notez que les mises à jour de Program.cs ont été centrées sur la génération de nombres aléatoires sécurisés.
+1. Notice that the updates to Program.cs focused on secure random number generation.
 
-    Les autres suggestions s’appliquent à la classe BankAccount et leur implémentation est au-delà du cadre de cette formation.
+    The other suggestions apply to the BankAccount class, and the implementation is beyond the scope of this training.
 
-1. Construisez une requête supplémentaire pour Program.cs qui vise à sécuriser la gestion des exceptions.
+1. Construct an additional prompt for Program.cs that seeks to secure exception handling.
 
-1. Vérifiez les suggestions fournies par GitHub Copilot Chat.
+1. Review the suggestions provided by GitHub Copilot Chat.
 
-    Par exemple, si vous entrez `@workspace /explain How can I implement secure exception handling in the Program.cs file?` dans la vue Conversation, GitHub Copilot Chat suggère des mises à jour similaires à la réponse suivante :
+    For example, if you enter `@workspace /explain How can I implement secure exception handling in the Program.cs file?` in the Chat view, GitHub Copilot Chat suggests updates that are similar to the following response:
 
-    *Pour implémenter une gestion sécurisée des exceptions dans le fichier Program.cs, vous devez suivre ces meilleures pratiques :*
+    *To implement secure exception handling in the Program.cs file, you should follow these best practices:*
 
-    *1. Interceptez des exceptions spécifiques :*
+    *1. Catch Specific Exceptions:*
 
-    *– Interceptez des exceptions spécifiques plutôt qu’un bloc générique catch (Exception ex). Cette approche permet de comprendre et de gérer les différents types d’erreurs de manière appropriée.*
+    *- Catch specific exceptions rather than using a general catch (Exception ex) block. This helps in understanding and handling different types of errors appropriately.*
 
-    *2. Journalisez les exceptions de façon sécurisée :*
+    *2. Log Exceptions Securely:*
 
-    *– Journalisez les exceptions en toute sécurité sans exposer d’informations sensibles. Utilisez un framework de journalisation pour gérer les journaux.*
+    *- Log exceptions securely without exposing sensitive information. Use a logging framework to manage logs.*
 
-    *3. Fournissez des messages conviviaux :*
+    *3. Provide User-Friendly Messages:*
 
-    *- Fournissez des messages d’erreur conviviaux sans révéler de détails internes.*
+    *- Provide user-friendly error messages without revealing internal details.*
 
-    *4. Utiliser des blocs finally pour le nettoyage :*
+    *4. Use Finally Blocks for Cleanup:*
 
-    *- Utilisez des blocs finally pour vous assurer que tout le nettoyage nécessaire est effectué, qu’une exception ait ou non été levée.*
+    *- Use finally blocks to ensure that any necessary cleanup is performed, regardless of whether an exception was thrown.*
 
-    *5. Évitez d’intercepter des exceptions non critiques :*
+    *5. Avoid Catching Non-Critical Exceptions:*
 
-    *- Évitez d’intercepter les exceptions qui doivent être autorisées à se propager, comme OutOfMemoryException ou StackOverflowException.*
+    *- Avoid catching exceptions that should be allowed to propagate, such as OutOfMemoryException or StackOverflowException.*
 
-    *Voici une version mise à jour de Program.cs avec une gestion sécurisée des exceptions :*
+    *Here is an updated version of Program.cs with secure exception handling:*
 
     ```csharp
 
@@ -997,10 +997,10 @@ GitHub Copilot Chat peut être utilisé pour améliorer la sécurité du code. V
 
     ```
 
-1. Implémentez les mises à jour suggérées qui aident à améliorer la sécurité du code pour votre fichier `Program.cs`.
+1. Implement the suggested updates that help to improve code security for your `Program.cs` file.
 
-1. Pour vous assurer qu’aucune erreur n’a été introduite par les modifications, compilez et exécutez votre solution.
+1. To ensure that no errors were introduced by the changes, build and run your solution.
 
-## Résumé
+## Summary
 
-Dans cette version de démonstration, vous avez utilisé GitHub Copilot Chat pour générer des suggestions pour améliorer la sécurité du code dans un exemple d’application. Vous avez développé des prompts qui ont dirigé GitHub Copilot pour fournir des suggestions visant à améliorer l’authentification, la protection des données, la journalisation et d’autres sujets liés à la sécurité. Vous avez implémenté les mises à jour suggérées pour améliorer la sécurité de la classe BankAccount et de la classe Program dans le projet **APL2007M5BankAccount-Security**.
+In this demo, you used GitHub Copilot Chat to generate suggestions for improving code security in a sample application. You developed prompts that directed GitHub Copilot to provide suggestions for improving authentication, data protection, logging, and other security-related topics. You implemented the suggested updates to improve the security of the BankAccount class and the Program class in the **APL2007M5BankAccount-Security** project.
