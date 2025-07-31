@@ -1,65 +1,65 @@
 ---
 demo:
-  title: "Démonstration\_: Créer du code à l’aide de complétions de ligne de code"
-  module: 'Module 3: Develop code features using GitHub Copilot tools'
+    title: 'Demo: Create code by using code line completions'
+    module: 'Module 3: Develop code features using GitHub Copilot tools'
 ---
 
-# Démonstration : Créer du code à l’aide de complétions de ligne de code
+# Demo: Create code by using code line completions
 
 ## Instructions
 
-Les activités de la version de démonstration sont conçues pour un environnement qui inclut les ressources suivantes :
+The demo activities are designed for an environment that includes the following resources:
 
 - Visual Studio Code.
-- L’extension du kit de développement C# pour Visual Studio Code.
-- Les extensions GitHub Copilot et GitHub Copilot Chat pour Visual Studio Code. Il est nécessaire de disposer d’un compte GitHub avec un abonnement actif pour GitHub Copilot.
-- Des exemples de projets de code créés en C#.
+- The C# Dev Kit extension for Visual Studio Code.
+- The GitHub Copilot and GitHub Copilot Chat extensions for Visual Studio Code. A GitHub account with an active subscription for GitHub Copilot is required.
+- Sample code projects created using C#.
 
-**REMARQUE** : Nous recommandons aux instructeurs d’utiliser leur propre compte GitHub et leur abonnement GitHub Copilot pour les démonstrations. Ainsi vous pouvez contrôler et personnaliser votre environnement de développement. Cette démarche facilite également l’ajustement des démonstrations en fonction des besoins de vos salles de classe.
+**NOTE**: We recommend that instructors consider using their own GitHub account and GitHub Copilot subscription for the demos. This will enable you to control and customize your dev environment. It will also make it easier to adjust the demos to fit the needs of your classrooms.
 
-**IMPORTANT** : Si vous choisissez d’exécuter les démonstrations dans l’environnement de laboratoire hébergé plutôt que sur votre ordinateur personnel instructeur, vous pouvez décompresser les exemples d’applications dans l’environnement hébergé. Vous devez configurer les extensions GitHub Copilot dans l’environnement hébergé avant de pouvoir exécuter les démonstrations. Vous pouvez constater que l’environnement hébergé est plus lent que votre environnement local. Vous devrez probablement ajuster l’allure des démonstrations en conséquence.
+**IMPORTANT**: If you choose to run the demos in the hosted lab environment rather than your instructor PC, you can unzip the sample apps in the hosted environment. You will need to configure the GitHub Copilot extensions in the hosted environment before you can run the demos. You may find that the hosted environment is slower than your local environment, so you may need to adjust the pace of the demos accordingly.
 
-### Présentez la version de démonstration
+### Introduce the demo
 
-GitHub Copilot peut fournir des suggestions de complétion de code pour de nombreux langages de programmation et un large éventail d’infrastructures, mais fonctionne particulièrement bien pour Python, JavaScript, TypeScript, Ruby, Go, C# et C++. Les complétions de ligne de code sont générées en fonction du contexte du code que vous écrivez. Vous pouvez accepter, rejeter ou accepter partiellement les suggestions fournies par GitHub Copilot.
+GitHub Copilot can provide code completion suggestions for numerous programming languages and a wide variety of frameworks, but works especially well for Python, JavaScript, TypeScript, Ruby, Go, C# and C++. Code line completions are generated based on the context of the code you're writing. You can accept, reject, or partially accept the suggestions provided by GitHub Copilot.
 
-GitHub Copilot fournit deux façons de générer des complétions de ligne de code :
+GitHub Copilot provides two ways to generate code line completions:
 
-- **Depuis un commentaire** : Vous pouvez générer des complétions de ligne de code en écrivant un commentaire qui décrit le code que vous souhaitez générer. GitHub Copilot fournit des suggestions de complétion de code basées sur le commentaire que vous écrivez.
+- **From a comment**: You can generate code line completions by writing a comment that describes the code you want to generate. GitHub Copilot provides code completion suggestions based on the comment you write.
 
-- **Depuis le code** : Vous pouvez générer des complétions de ligne de code en commençant une ligne de code ou en appuyant sur Entrée après une ligne de code terminée. GitHub Copilot fournit des suggestions de complétion de code basées sur le code que vous écrivez.
+- **From code**: You can generate code line completions by starting a code line, or by pressing Enter after a completed code line. GitHub Copilot provides code completion suggestions based on the code you write.
 
-Dans cette version de démonstration, vous utilisez GitHub Copilot pour générer des complétions de ligne de code dans votre environnement Visual Studio Code.
+In this demonstration, you use GitHub Copilot to generate code line completions in your Visual Studio Code environment.
 
-### Créer une application console dans votre environnement Visual Studio Code
+### Create a console app in your Visual Studio Code environment
 
-Dans cette version de démonstration, vous allez créer une application console à l’aide des outils GitHub Copilot.
+In this demonstration, you create a console app using GitHub Copilot tools.
 
-Utilisez les étapes suivantes pour terminer cette section de la version de démonstration :
+Use the following steps to complete this section of the demo:
 
-1. Ouvrez une nouvelle instance de Visual Studio Code, puis ouvrez l’affichage Conversation.
+1. Open a new instance of Visual Studio Code, and then open the Chat view.
 
-    Vous pouvez ouvrir la vue Conversation en sélectionnant **Ouvrir la conversation** dans le centre de commandes Visual Studio Code ou en utilisant le raccourci clavier **Ctrl+Alt+I**.
+    You can open the Chat view by selecting **Open Chat** from the Visual Studio Code Command Center or using the **Ctrl+Alt+I** keyboard shortcut.
 
-1. Dans l’affichage de Conversation, entrez l’invite suivante :
+1. In the Chat view, enter the following prompt:
 
     ```plaintext
     @workspace /new console application named APL2007M3. Use C# LangVersion 12 and NET8.0. Only .cs and .csproj files. Enable ImplicitUsings and Nullable
     ```
 
-1. Dans la vue Conversation, sélectionnez **Créer un espace de travail**.
+1. In the Chat view, select **Create Workspace**.
 
-    GitHub Copilot utilise votre invite pour créer l’espace de travail pour une nouvelle application de console. L’application utilise `C#` et `.NET8.0`. Le projet de code est nommé `APL2007M3` et inclut les fichiers `.cs` et `.csproj`. Le fichier `APL2007M3.csproj` spécifie C# `LangVersion 12` et active `ImplicitUsings` et `Nullable`.
+    GitHub Copilot uses your prompt to create the workspace for a new console application. The application uses `C#` and `.NET8.0`. The code project is named `APL2007M3`, and includes the `.cs` and `.csproj` files. The `APL2007M3.csproj` file specifies C# `LangVersion 12` and enables `ImplicitUsings` and `Nullable`.
 
-1. Dans la boîte de dialogue Sélectionner un dossier, accédez à votre dossier Bureau, sélectionnez **Bureau**, puis sélectionnez **Sélectionner en tant que dossier parent**.
+1. In the Select Folder dialog, navigate to your Desktop folder, select **Desktop**, and then select **Select as Parent Folder**.
 
-    Vous êtes invité à sélectionner un dossier parent pour le nouvel espace de travail. La sélection du dossier Bureau est un bon choix pour cette version de démonstration. Le dossier Bureau est facile à trouver. N’oubliez pas d’effectuer un nettoyage à la fin de cette formation.
+    You're prompted to select a parent folder for the new workspace. Selecting the Desktop folder is a good choice for this demo. The Desktop folder is easy to find. Remember to clean up when you complete this training.
 
-1. Lorsque vous êtes invité à ouvrir le nouveau projet, sélectionnez **Ouvrir**.
+1. When prompted to open the new project, select **Open**.
 
-1. Dans la vue Explorateur, sélectionnez **Program.cs**.
+1. In the Explorer view, select **Program.cs**.
 
-1. Remplacez le contenu du fichier Program.cs par le code suivant :
+1. Replace the contents of the Program.cs file with the following code:
 
     ```csharp
 
@@ -83,43 +83,43 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-Vos exigences de configuration sont complètes et vous êtes prêt à poursuivre la version de démonstration.
+Your setup requirements are complete and you're ready to continue the demo.
 
-### Utiliser GitHub Copilot pour générer des complétions de ligne de code depuis un commentaire
+### Use GitHub Copilot to generate code line completions from a comment
 
-GitHub Copilot génère des suggestions de complétion de code basées sur le commentaire et le contexte existant de votre application. Vous pouvez utiliser les commentaires pour décrire des extraits de code, des méthodes, des structures de données et d’autres éléments de code.
+GitHub Copilot generates code completion suggestions based on the comment and the existing context of your app. You can use comments to describe code snippets, methods, data structures, and other code elements.
 
-Utilisez les étapes suivantes pour terminer cette section de la version de démonstration :
+Use the following steps to complete this section of the demo:
 
-1. Dans le fichier **Program.cs**, créez deux lignes de code vides sous la méthode `Main`.
+1. In the **Program.cs** file, create two empty code lines below the `Main` method.
 
-1. Pour créer une structure de données qui peut être utilisée pour générer des données de test, créez le commentaire de code suivant, puis appuyez sur Entrée :
+1. To create a data structure that can be used to generate test data, create the following code comment, and then press Enter:
 
     ```C#
     // public struct SalesData. Include the following fields: date sold, department name, product ID, quantity sold, unit price
     ```
 
-    GitHub Copilot génère une ou plusieurs suggestions de complétion de code en fonction de votre commentaire de code et de tout code existant qu’il trouve dans votre application.
+    GitHub Copilot generates one or more code completion suggestions based on your code comment and any existing code that it finds in your app.
 
-1. Prenez un moment pour examiner les suggestions de complétion de code fournies par GitHub Copilot.
-
-    > [!NOTE]
-    > Si GitHub Copilot génère des suggestions pour une méthode plutôt qu’une structure de données, tapez **public str** et attendez que la suggestion de complétion du code soit mise à jour. GitHub Copilot utilise les informations supplémentaires pour améliorer ses suggestions.
-
-    Remarquez les types de données utilisés pour déclarer les champs de la structure de données. GitHub Copilot sélectionne les types de données et les noms des variables en fonction de votre code existant et du commentaire de code. GitHub Copilot tente de déterminer comment l’application utilise des variables puis définit les types de données en conséquence.
-
-    Lorsque GitHub Copilot génère plusieurs suggestions, vous pouvez parcourir les suggestions en sélectionnant les flèches gauche ou droite (`>` ou `<`) situées à gauche du bouton **Accepter**. Cela vous permet d’évaluer et de sélectionner la suggestion qui convient le mieux à vos besoins.
-
-    Il est possible d’accepter une suggestion de complétion de code qui n’est pas une correspondance exacte pour ce que vous voulez. Les modifications requises pour « corriger » la suggestion doivent toutefois être claires. Dans ce cas, certains des types de données ne correspondent pas à votre besoin, mais vous pouvez les ajuster après avoir accepté la saisie automatique suggérée.
-
-    Si aucune des options suggérées ne satisfait vos besoins, vous pouvez essayer deux choses. Pour ouvrir un nouvel onglet de l’éditeur contenant une liste d’autres suggestions, appuyez sur les touches **Ctrl** + **Entrer**. Cette combinaison de touches rapides ouvre un nouvel onglet contenant jusqu’à 10 suggestions supplémentaires. Chaque suggestion est suivie d’un bouton à utiliser pour accepter la suggestion. L’onglet se ferme automatiquement après l’acceptation d’une suggestion. Votre autre option consiste à appuyer sur la touche **Échap** pour ignorer les suggestions et réessayer. Vous pouvez ajuster le commentaire de code pour fournir davantage de contexte que GitHub Copilot peut utiliser.
+1. Take a minute to review the code completion suggestions provided by GitHub Copilot.
 
     > [!NOTE]
-    > GitHub Copilot peut parfois proposer une suggestion par étapes. Si cela se produit, vous pouvez appuyer sur Entrer pour afficher les étapes supplémentaires de la suggestion après l’appui sur la touche Tab.
+    > If GitHub Copilot generates suggestions for a method rather than a data structure, type **public str** and wait for the code completion suggestion to update. GitHub Copilot uses the additional information to improve its suggestions.
 
-1. Pour accepter une structure de données suggérée, appuyez sur la touche Tab ou sélectionnez **Accepter**.
+    Notice the data types used to declare the fields of the data structure. GitHub Copilot selects data types and variable names based on your existing code and the code comment. GitHub Copilot tries to determine how the application uses variables and defines the data types accordingly.
 
-1. Pour modifier les types de données de champ, mettez à jour votre code comme suit :
+    When GitHub Copilot generates more than one suggestion, you can cycle through the suggestions by selecting the left or right arrows (`>` or `<`) located to the left of the **Accept** button. This allows you to review and select the suggestion that best fits your needs.
+
+    It's okay to accept a code completion suggestion that isn't an exact match for what you want. However, the changes required to "fix" the suggestion should be clear. In this case, some of the data types aren't what you want, but you can adjust them after accepting the suggested autocompletion.
+
+    If none of the suggested options resemble what you need, there are two things you can try. To open a new editor tab containing a list of other suggestions, press the **Ctrl** + **Enter** keys. This hotkey combination opens a new tab containing up to 10 more suggestions. Each suggestion is followed by a button that you can use to accept the suggestion. The tab closes automatically after you accept a suggestion. Your other option is to press the **Esc** key to dismiss the suggestions and try again. You can adjust the code comment to provide more context for GitHub Copilot to work with.
+
+    > [!NOTE]
+    > GitHub Copilot can occasionally propose a suggestion in stages. If this happens, you can press Enter to see additional stages of the suggestion after pressing the Tab key.
+
+1. To accept a suggested data structure, press the Tab key or select **Accept**.
+
+1. To modify the field data types, update your code as follows:
 
     ```csharp
 
@@ -134,38 +134,38 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-    L’ajustement rapide des suggestions de complétion de code vous permet de vous assurer de la génération du code souhaité. Il est particulièrement important d’apporter des corrections au début de votre processus de développement, lorsque de grandes parties de votre codebase doivent encore être développées. Les saisies semi-automatiques de code suivantes sont basées sur le code déjà écrit. Il est donc important de veiller à ce que votre code soit aussi précis que possible.
+    Making quick adjustments to code completion suggestions helps to ensure that you're building the code you want. It's especially important to make corrections early in your development process when large portions of your codebase still need to be developed. Subsequent code completions will be based on the code you've already written, so it's important to ensure that your code is as accurate as possible.
 
-1. Créez deux lignes de code vides sous la structure de données `SalesData`.
+1. Create two empty code lines below the `SalesData` data structure.
 
-1. Pour créer une méthode qui génère des données de test en utilisant la structure de données `SalesData`, écrivez le commentaire de code suivant, puis appuyez sur Entrée :
+1. To create a method that generates test data using the `SalesData` data structure, write the following code comment and then press Enter:
 
     ```C#
     /* the GenerateSalesData method returns 1000 SalesData records. It assigns random values to each field of the data structure */
     ```
 
-1. Prenez un moment pour examiner les suggestions de complétion de code fournies par GitHub Copilot.
+1. Take a minute to review the code completion suggestions provided by GitHub Copilot.
 
-    Remarquez que la méthode `GenerateSalesData` est conçue pour retourner un tableau d’objets `SalesData`. La méthode génère 1 000 enregistrements de données de test, avec des valeurs aléatoires affectées à chaque champ de la structure de données `SalesData`.
+    Notice that the `GenerateSalesData` method is designed to return an array of `SalesData` objects. The method generates 1,000 records of test data, with random values assigned to each field of the `SalesData` data structure.
 
-    Vous devez toujours évaluer les suggestions proposées par GitHub Copilot et GitHub Copilot Chat, même lorsqu’elles semblent correctes.
+    You should always review the suggestions proposed by GitHub Copilot and GitHub Copilot Chat, even when they appear to be correct.
 
     > [!NOTE]
-    > Si GitHub Copilot propose une seule ligne de code au lieu d’une méthode complète `GenerateSalesData`, appuyez sur **Ctrl+Entrée** pour ouvrir l’onglet Suggestions de GitHub Copilot. Passez en revue les suggestions dans le nouvel onglet. À l’étape suivante, utilisez le bouton « Accepter une suggestion # » pour accepter la suggestion. GitHub Copilot présente des suggestions incrémentielles à l’occasion. Bien que vous puissiez accepter les complétions de code de manière incrémentielle, il est préférable d’utiliser l’onglet Suggestions de GitHub Copilot pour évaluer les suggestions complètes avant de prendre une décision d’accepter ou d’ignorer.
+    > If GitHub Copilot suggests a single code line rather than a completed `GenerateSalesData` method, press **Ctrl+Enter** to open the GitHub Copilot Suggestions tab. Review the suggestions on the new tab. On the next step, use the "Accept suggestion #" button to accept the suggestion. GitHub Copilot presents suggestions incrementally on occasion. Although you can accept the code completions incrementally, it's better to use the GitHub Copilot Suggestions tab to review full suggestion before making a decision to accept or discard.
 
-1. Faites défiler les suggestions de saisie semi-automatique de code et sélectionnez celle qui correspond le mieux aux besoins.
+1. Scroll through the code completion suggestions and select the best match for the requirements.
 
-1. Pour accepter la complétion de code, appuyez sur la touche Tab.
+1. To accept the code completion, press the Tab key.
 
-    Notez que la suggestion de complétion du code inclut une erreur de syntaxe dans le code utilisé pour générer le champ `DateSold`. `DateOnly` accepte trois valeurs entières à répertorier dans le bon ordre : **Année**, **Mois**, **Jour**.
+    Notice that the code completion suggestion includes a syntax error in the code used to generate the `DateSold` field. `DateOnly` accepts three integer values that must be listed in the correct order: **Year**, **Month**, **Day**.
 
-1. Pour spécifier une année unique pour le code utilisé pour générer le champ `DateSold`, mettez à jour la ligne de code comme suit :
+1. To specify a single year for the code used to generate the `DateSold` field, update the code line as follows:
 
     ```C#
     salesData[i].DateSold = new DateOnly(2023, random.Next(1, 13), random.Next(1, 29));
     ```
 
-1. Si nécessaire, ajustez les autres lignes de code pour qu’elles correspondent à l’extrait de code suivant :
+1. If necessary, adjust the other code lines to match the following code snippet:
 
     ```csharp
 
@@ -186,75 +186,75 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-La possibilité de générer du code depuis des commentaires de code est une fonctionnalité puissante de GitHub Copilot. Avec seulement deux commentaires, vous avez pu générer une structure de données et une méthode qui génère des données de test.
+The ability to generate code from code comments is a powerful feature of GitHub Copilot. With just two comments, you were able to generate a data structure and a method that generates test data.
 
-### Utiliser GitHub Copilot pour générer des complétions de ligne de code
+### Use GitHub Copilot to generate code line completions
 
-GitHub Copilot peut générer des complétions de ligne de code en fonction du code que vous entrez. Vous pouvez générer des complétions de ligne de code de deux façons :
+GitHub Copilot can generate code line completions based on the code you enter. You can generate code line completions in two ways:
 
-- Commencez à entrer une ligne de code, puis attendez que GitHub Copilot suggère une autocomplétion pour votre ligne de code non terminée.
-- Entrez une ligne de code complète, appuyez sur **Entrer**, puis attendez que GitHub Copilot suggère une saisie automatique pour la ligne de code.
+- Start entering a code line, and then wait for GitHub Copilot to suggest an autocompletion for your unfinished code line.
+- Enter a complete code line, press the **Enter** key, and then wait for GitHub Copilot to suggest an autocompletion for the next code line.
 
 > [!NOTE]
-> GitHub Copilot génère les complétions de code suggérées en fonction du code que vous entrez et du contexte défini par le code au sein de votre application. Plus vous avez de code dans votre application, en supposant qu’il s’agit d’un code de bonne qualité, plus GitHub Copilot dispose de contexte. À mesure que le volume et la qualité du code existant augmentent, il en va de même de la qualité et de la fiabilité des complétions de ligne de code suggérés par GitHub Copilot. GitHub Copilot excelle pour générer des complétions de ligne de code pour les tâches et modèles de programmation courants, en particulier quand une séquence de composants connexes doit être générée.
+> GitHub Copilot generates suggested code completions based on the code you enter and the context defined by the code within your app. The more code you have in your app, assuming it's good quality code, the more context GitHub Copilot has available. As the volume and quality of existing code increases, so does the quality and reliability of the code line completions suggested by GitHub Copilot. GitHub Copilot is very good at generating code line completions for common programming tasks and patterns, especially when a sequence of related components needs to be generated.
 
-Dans cette partie de la version de démonstration, vous travaillez sur la méthode `QuarterlySalesReport`.
+In this portion of the demo, you work on the `QuarterlySalesReport` method.
 
-Voici les tâches que vous devez effectuer :
+Here are the tasks you need to complete:
 
-- Mettre à jour le constructeur de méthode avec un paramètre qui accepte votre collection d’objets `SalesData`.
-- Utiliser GitHub Copilot pour générer des complétions de ligne de code qui traitent les données de ventes pour le rapport trimestriel.
-- Exécutez l’application et examinez le rapport sur le chiffre de ventes trimestrielles.
+- Update the method constructor with a parameter that accepts your collection of `SalesData` objects.
+- Use GitHub Copilot to generate code line completions that process sales data for the quarterly report.
+- Run the app and review the quarterly sales report.
 
-Utilisez les étapes suivantes pour terminer cette section de la version de démonstration :
+Use the following steps to complete this section of the demo:
 
-1. Mettre à jour le constructeur de méthode pour `QuarterlySalesReport`, comme suit :
+1. Update the method constructor for `QuarterlySalesReport` as follows:
 
     ```C#
     public void QuarterlySalesReport(SalesData[] salesData)
     ```
 
-1. Prenez un moment pour réfléchir au code que vous devez développer.
+1. Take a minute to consider the code that you need to develop.
 
-    Le concept est simple. Vous souhaitez que votre code calcule les ventes trimestrielles en fonction de vos données de ventes, puis écrive un rapport. Pour ce faire, votre code doit :
+    The concept is straight forward. You want your code to calculate quarterly sales based on your sales data and then write a report. To do that, your code needs to:
 
-    - Itérez via la collection `salesData`.
-    - Calculez la valeur de chaque vente en fonction de la quantité vendue et du prix unitaire.
-    - Utilisez la date de vente pour déterminer le trimestre auquel appartient une vente.
-    - Additionnez les ventes der chaque trimestre.
-    - Écrivez un rapport sur les ventes par trimestre.
+    - Iterate through the `salesData` collection.
+    - Calculate the value of each sale based on the quantity sold and the unit price.
+    - Use the sales date to determine which quarter a sale belongs to.
+    - Sum the sales for each quarter.
+    - Write a report of the sales by quarter.
 
-    Une option consiste à commencer à entrer le code d’une boucle `foreach`, puis à voir ce que GitHub Copilot suggère.
+    One option is to begin entering the code for a `foreach` loop and then see what GitHub Copilot suggests.
 
-1. Dans la méthode `QuarterlySalesReport`, créez une ligne de code en haut du bloc de code.
+1. In the `QuarterlySalesReport` method, create a new code line at the top of the code block.
 
-    Il doit y avoir au moins une ligne de code vide entre la nouvelle ligne de code et celle contenant `Console.WriteLine()`.
+    There should be at least one blank code line between the new code line and the code line containing `Console.WriteLine()`.
 
-1. Pour générer une complétion de ligne de code, tapez `foreach (` et attendez que GitHub Copilot suggère des options de complétion de ligne de code.
+1. To generate a code line completion, type `foreach (` and then wait for GitHub Copilot to suggest code line completion options.
 
-1. Examinez la complétion de code suggérée par GitHub Copilot.
+1. Review the code completion suggested by GitHub Copilot.
 
-    La complétion de code suggérée n’est pas ce que vous vouliez.
+    The suggested code completion isn't what you wanted.
 
-    Bien que GitHub Copilot suggère une boucle `foreach` qui itère dans les `salesData`, il n’y a aucune analyse ni aucun calcul à l’intérieur de la boucle. Chacun des options suggérées incluent des instructions `Console.WriteLine` que vous ne souhaitez pas ou dont vous n’avez pas besoin.
+    Although GitHub Copilot suggests a `foreach` loop that iterates through the `salesData`, there's no analysis or calculations inside the loop. Each of the suggested options include `Console.WriteLine` statements that you don't want or need.
 
-1. Prenez un moment pour réfléchir à la raison pour laquelle GitHub Copilot suggère des instructions `Console.WriteLine`.
+1. Take a minute to consider why GitHub Copilot is suggesting `Console.WriteLine` statements.
 
-    Rappelez-vous que GitHub Copilot génère des suggestions de complétion de code en fonction du contexte de votre code. Dans ce cas, vous n’avez pas vraiment beaucoup de code à prendre en compte par GitHub Copilot. Et la situation empire.
+    Recall that GitHub Copilot generates code completion suggestions based on the context of your code. In this case, you don't really have much code for GitHub Copilot to consider. And the situation gets worse.
 
-    Le code que GitHub Copilot voit dans votre méthode est une instruction `Console.WriteLine`. Sans aucun autre contexte disponible dans la méthode et aucune méthode semblable dans votre codebase à partir duquel dessiner, GitHub Copilot conclut que vous *souhaitez* peut-être des instructions `Console.WriteLine` dans la boucle `foreach`.
+    The code that GitHub Copilot does see inside your method is a `Console.WriteLine` statement. With no other context available within the method and no similar methods in your codebase to draw from, GitHub Copilot concludes that you may *want* `Console.WriteLine` statements inside the `foreach` loop.
 
-    GitHub Copilot fonctionne mieux lorsque votre code est propre et ciblé. Si vous voyez des commentaires de code superflus ou même des instructions dans votre code, vous pouvez les supprimer avant d’essayer d’utiliser les saisies semi-automatiques de code GitHub Copilot.
+    GitHub Copilot works best when your code is clean and focused. If you see superfluous code comments or statements in your code, you may want to remove them before you try using GitHub Copilot code completions.
 
-1. Pour nettoyer votre code avant de demander à GitHub Copilot de refaire un autre essai, procédez comme suit :
+1. To clean up your code before giving GitHub Copilot another try, complete the following steps:
 
-    - Annulez la complétion de code suggérée `foreach (`.
-    - Supprimez l’instruction `foreach (` partielle que vous avez entrée.
-    - Supprimez l’instruction `Console.WriteLine` de votre méthode `QuarterlySalesReport`.
+    - Cancel the suggested `foreach (` code completion.
+    - Delete the partial `foreach (` statement that you entered.
+    - Delete the `Console.WriteLine` statement from your `QuarterlySalesReport` method.
 
-    Vous devriez maintenant être prêt à réessayer GitHub Copilot.
+    Now you should be ready to try GitHub Copilot again.
 
-1. Vérifiez que votre méthode `QuarterlySalesReport` ressemble au code suivant :
+1. Ensure that your `QuarterlySalesReport` method looks similar to the following code:
 
     ```C#
     public void QuarterlySalesReport(SalesData[] salesData)
@@ -264,22 +264,22 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
     }
     ```
 
-1. Positionnez le curseur sur une ligne de code vide à l’intérieur de la méthode `QuarterlySalesReport`, puis appuyez sur Entrée.
+1. Position the cursor on a blank code line inside the `QuarterlySalesReport` method, and then press Enter.
 
-    GitHub Copilot peut prendre un certain temps pour générer la complétion de code suggérée.
+    It may take a moment for GitHub Copilot to generate the suggested code completion.
 
-1. Prenez un moment pour examiner les complétions de code suggérées.
+1. Take a minute to review the suggested code completions.
 
     > [!NOTE]
-    > Bien que GitHub Copilot n’ait qu’un nom de méthode et un paramètre à utiliser, cela peut être suffisant pour générer des suggestions utiles. Vous devriez voir des suggestions qui calculent les ventes par trimestre. Rejeter les suggestions et réessayer peut fournir des résultats différents.
+    > Although GitHub Copilot only has a method name and parameter to work with, that may be enough to generate useful suggestions. You should see suggestions that calculate sales by quarter. Rejecting the suggestions and trying again can provide different results.
 
-    Vous pouvez parcourir les suggestions en sélectionnant `>` ou `<`.
+    You can cycle through the suggestions by selecting `>` or `<`.
 
-    Notez que la complétion de code suggérée effectue une itération dans les données de ventes et effectue des calculs trimestriels des ventes.
+    Notice that the suggested code completion iterates through the sales data and performs quarterly sales calculations.
 
-1. Pour accepter la complétion de code suggérée, appuyez sur la touche Tab.
+1. To accept the code completion suggested, press the Tab key.
 
-    La complétion de code suggérée calcule et affiche le chiffre d’affaires trimestriel en fonction des données de ventes.
+    The suggested code completion calculates and displays the quarterly income based on sales data.
 
     ```csharp
 
@@ -310,19 +310,19 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-1. Notez que la méthode `GetQuarter` est utilisée pour déterminer le trimestre en fonction du mois de la vente.
+1. Notice that the `GetQuarter` method is used to determine the quarter based on the month of the sale.
 
-    Cette méthode n’est pas implémentée dans votre code, mais elle est requise pour la génération et l’exécution du code.
+    This method isn't implemented in your code, but it's required in order for the code to build and run.
 
-1. Créez deux lignes de code vide sous la méthode `QuarterlySalesReport`.
+1. Create two blank code lines below the `QuarterlySalesReport` method.
 
-1. Notez que GitHub Copilot suggère une complétion de code pour la méthode `GetQuarter`.
+1. Notice that GitHub Copilot suggests a code completion for the `GetQuarter` method.
 
-    Avec le contexte fourni par la méthode `QuarterlySalesReport`, GitHub Copilot peut facilement générer une complétion de code pour la méthode `GetQuarter`, qui détermine le trimestre en fonction du mois de la vente.
+    With the context provided by the `QuarterlySalesReport` method, GitHub Copilot can easily generate a code completion for the `GetQuarter` method that determines the quarter based on the month of the sale.
 
-1. Prenez un moment pour examiner la complétion de la ligne de code suggérée pour la méthode `GetQuarter`.
+1. Take a minute to review the suggested code line completion for the `GetQuarter` method.
 
-1. Pour accepter la complétion de code suggérée, appuyez sur la touche Tab.
+1. To accept the code completion suggested, press the Tab key.
 
     ```csharp
 
@@ -348,19 +348,19 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-1. Notez que la méthode `Main` doit être terminée avant de pouvoir exécuter le code.
+1. Notice that the `Main` method needs to be completed before you can run the code.
 
-    Vous pouvez utiliser les commentaires de la méthode `Main` pour mettre à jour votre code.
+    You can use the comments in the `Main` method to update your code.
 
-1. Positionnez le curseur à la fin du commentaire de code `// call the GenerateSalesData method`, puis appuyez sur Entrée.
+1. Position the cursor at the end of the `// call the GenerateSalesData method` code comment, and then press Enter.
 
-    GitHub Copilot utilise le commentaire pour proposer une instruction appelante pour la méthode.
+    GitHub Copilot uses the comment to propose a calling statement for the method.
 
-1. Examinez, puis acceptez la complétion de code suggérée par GitHub Copilot.
+1. Review and then accept the code completion suggested by GitHub Copilot.
 
-1. Répétez le processus pour le commentaire de code `// call the QuarterlySalesReport method`.
+1. Repeat the process for the `// call the QuarterlySalesReport method` code comment.
 
-1. Votre méthode `Main` doit contenir le code suivant :
+1. Your `Main` method should contain the following code:
 
     ```csharp
 
@@ -376,7 +376,7 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-1. Prenez un moment pour examiner le code de votre classe `QuarterlyIncomeReport`.
+1. Take a minute to review the code in your `QuarterlyIncomeReport` class.
 
     ```csharp
 
@@ -468,21 +468,21 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
     
     ```
 
-    Ce code a été créé presque entièrement à l’aide des saisies semi-automatiques de lignes de code générées par GitHub Copilot. Or, il est important que vous examiniez les suggestions de code, car des corrections peuvent être nécessaires, comme dans le cas présent. Vous devez toujours passer en revue les saisies semi-automatiques de code suggérées par GitHub Copilot pour vérifier que le code répond à vos besoins.
+    This code was created, almost entirely, using code line completions generated by GitHub Copilot. However, your review of code suggestions is important, and corrections were required. You should always review the code completions suggested by GitHub Copilot to ensure that the code meets your requirements.
 
-1. Pour examiner la sortie du rapport, exécutez l’application.
+1. To review the report output, run the app.
 
-    Ouvrez une fenêtre du Terminal dans Visual Studio Code, puis entrez la commande suivante :
+    Open a Terminal window in Visual Studio Code, and then enter the following command:
 
     ```bash
     dotnet run
     ```
 
-    La sortie devrait afficher le rapport de chiffre d’affaires trimestriel, en indiquant le nom du service, le trimestre et le chiffre d’affaires pour chaque service et trimestre représenté dans les données de test.
+    The output should display the quarterly income report, showing the department name, quarter, and income for each department and quarter represented in the test data.
 
-1. Examinez la sortie dans la fenêtre du Terminal.
+1. Review the output in the Terminal window.
 
-    Même si les résultats trimestriels sont basés sur des valeurs numériques aléatoires, vous devez obtenir un rapport dont la mise en forme est semblable à la sortie suivante :
+    Although the quarterly results are based on random numeric values, you should see a report that's formatted similar to the following output:
 
     ```output
 
@@ -495,8 +495,8 @@ Utilisez les étapes suivantes pour terminer cette section de la version de dém
 
     ```
 
-    Il reste encore du travail à effectuer pour terminer la classe `QuarterlyIncomeReport`. Dans l’unité suivante, vous utilisez GitHub Copilot Chat pour étendre et mettre à jour votre application.
+    There's still work required to complete the `QuarterlyIncomeReport` class. In the next unit, you use GitHub Copilot Chat to extend and update your app.
 
-### Résumé
+### Summary
 
-Dans cette version de démonstration, vous avez utilisé GitHub Copilot pour générer des complétions de ligne de code dans votre environnement Visual Studio Code. Vous avez utilisé des commentaires de code pour générer une structure de données et une méthode qui génère des données de test. Vous avez également utilisé des complétions de ligne de code pour générer le code qui traite les données de ventes pour un rapport de chiffre d’affaires trimestriel.
+In this demo, you used GitHub Copilot to generate code line completions in your Visual Studio Code environment. You used code comments to generate a data structure and a method that generates test data. You also used code line completions to generate the code that processes sales data for a quarterly income report.
